@@ -1,0 +1,6 @@
+# zie https://hub.docker.com/r/microsoft/dotnet
+FROM mcr.microsoft.com/dotnet/sdk:9.0 as build-env
+WORKDIR /app
+COPY . .
+RUN dotnet publish -c Release
+CMD ["sleep", "infinity"]
